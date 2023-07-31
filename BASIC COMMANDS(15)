@@ -23,4 +23,10 @@ SELECT DISTINCT first_name FROM Customers;
 SELECT DISTINCT last_name FROM Customers;
 --8.Searching using a pattern and wildcards
 SELECT last_name from Customers where last_name like "P%";
-
+SELECT item from Orders WHERE item like 'M%';
+SELECT status from shippings WHERE status like "P%";
+SELECT first_name from Customers WHERE first_name like "P%";
+SELECT first_name from Customers WHERE first_name like 'G_____m';
+SELECT LAST_NAME FROM CUSTOMERS WHERE LAST_NAME LIKE 'P___A';
+--9.LETTER NOT START WITH "M"
+SELECT first_name FROM Customers WHERE FIRST_NAME like '[^G]%';
