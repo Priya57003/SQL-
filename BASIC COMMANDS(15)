@@ -17,3 +17,10 @@ SELECT last_name from Customers WHERE Customer_id=6 or Customer_id=10;
 --6.ORDER BY using Ascending and Descending Order
 SELECT age FROM Customers ORDER BY age DESC;
 SELECT customer_id,order_id FROM Orders ORDER BY order_id DESC;
+SELECT customer_id,age FROM Customers ORDER BY customer_id,age asc;
+--7.Display Unique records from table(Not on Specific Columns)
+SELECT DISTINCT first_name FROM Customers;
+SELECT DISTINCT last_name FROM Customers;
+--8.Searching using a pattern and wildcards
+SELECT last_name from Customers where last_name like "P%";
+
