@@ -1,0 +1,19 @@
+--1.Select all columns in Table  
+SELECT * FROM orders;
+--2.Select Specific columns in a table
+SELECT * FROM Customers WHERE age>30 OR age <=20;
+SELECT first_name,last_name FROM Customers;
+SELECT item,amount FROM Orders;
+--3.Select data based on Numeric Criteria
+SELECT first_name,last_name FROM Customers WHERE Customer_id=6;
+SELECT STATUS FROM SHIPPINGS WHERE SHIPPING_ID=2;
+--4.Select data using a String Criteria
+SELECT AGE,country FROM Customers WHERE first_name="Betty";
+SELECT AGE,country FROM Customers WHERE first_name="Gokul";
+SELECT AGE,country FROM Customers WHERE first_name="Gowtham";
+--5.Select data using a AND,OR 
+SELECT first_name,last_name FROM customers WHERE first_name="Guna" and customer_id=9;
+SELECT last_name from Customers WHERE Customer_id=6 or Customer_id=10;
+--6.ORDER BY using Ascending and Descending Order
+SELECT age FROM Customers ORDER BY age DESC;
+SELECT customer_id,order_id FROM Orders ORDER BY order_id DESC;
