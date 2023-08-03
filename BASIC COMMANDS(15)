@@ -30,3 +30,21 @@ SELECT first_name from Customers WHERE first_name like 'G_____m';
 SELECT LAST_NAME FROM CUSTOMERS WHERE LAST_NAME LIKE 'P___A';
 --9.LETTER NOT START WITH "M"
 SELECT first_name FROM Customers WHERE FIRST_NAME like '[^G]%';
+--10.Runtime Discount 
+SELECT order_id, amount-50 as Discount FROM Orders;
+--11.CASE,ELSE
+SELECT customer_id,
+       CASE 
+           WHEN age > 30 THEN "Allowed"
+           WHEN age < 18 THEN "Not allowed"
+           ELSE "nil"
+       END AS age_status
+FROM Customers;
+SELECT order_id,
+      CASE 
+          WHEN amount>400 THEN "Medium"
+          WHEN amount>12000 THEN "High Salary"
+          ELSE "nil"
+      END AS Salary_Status
+ FROM Orders;
+
